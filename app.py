@@ -9,8 +9,8 @@ def compare_models(text):
     result2 = distilbert_model(text)[0]
 
     return(
-        f"BERT -> {result1['Label']} {round(result1['Score'],2)}\n"
-        f"DistilBERT -> {result2['Label']} {round(result2['Score'],2)}"
+        f"BERT -> {result1['label']} {round(result1['score'],2)}\n"
+        f"DistilBERT -> {result2['label']} {round(result2['score'],2)}"
     )
 
 iface = gr.Interface(
